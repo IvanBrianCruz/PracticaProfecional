@@ -1,0 +1,41 @@
+CREATE DATABASE recruitingrh;
+
+USE recruitingrh;
+
+CREATE TABLE profesiones (
+    idProfesion INT AUTO_INCREMENT PRIMARY KEY,
+    nombreProfesion VARCHAR(50)NOT NULL 
+);
+
+CREATE TABLE aspirantes (
+    idAspirante INT AUTO_INCREMENT PRIMARY KEY,
+    dni int NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    telefono VARCHAR(15),
+    perfilUrlLinkedin VARCHAR(255),
+    fechaNacimiento DATE,
+    sexo VARCHAR(50),
+    imagen VARCHAR(255),
+    idProfesion INT,
+    FOREIGN KEY (idProfesion) REFERENCES profesiones(idProfesion)
+);
+
+-- Insertar datos en la tabla de profesiones
+INSERT INTO profesiones (nombreProfesion) VALUES 
+('Ingeniero'),
+('Médico'),
+('Abogado'),
+('Diseñador gráfico'),
+("Programador"),
+('Contador');
+
+-- Insertar datos en la tabla de aspirantes
+INSERT INTO aspirantes (dni, nombre, apellido, email, telefono, perfilUrlLinkedin, fechaNacimiento, sexo, idProfesion, imagen) VALUES
+(12345678, 'Gaby', 'Pérez', 'gaby@gmail.com', '123456789', 'linkedin.com/in/gabyperez', '1990-05-15', 'Femenino', 1, 'foto1.jpg'),
+(23456789, 'Marío', 'García', 'mario@gmail.com', '987654321', 'linkedin.com/in/mariagarcia', '1992-08-25', 'Masculino', 2, 'foto2.jpg'),
+(34567890, 'Alicia', 'López', 'alicia@gmail.com', '456789012', 'linkedin.com/in/alicialopez', '1988-12-10', 'Femenino', 3, 'foto3.jpg'),
+(45678901, 'Ana', 'Martínez', 'ana@gmail.com', '789012345', 'linkedin.com/in/anamartinez', '1995-03-20', 'Femenino', 4, 'foto4.jpg'),
+(56789012, 'David', 'Rodríguez', 'david@gmail.com', '890123456', 'linkedin.com/in/davidrodriguez', '1991-07-05', 'Masculino', 5, 'foto5.jpg'),
+(56789016, 'Lucas', 'cruz', 'lucas@gmail.com', '890123456', 'linkedin.com/in/lucascruz', '1991-11-11', 'Masculino', 6, 'foto6.jpg');
