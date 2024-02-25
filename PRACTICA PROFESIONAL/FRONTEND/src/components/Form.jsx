@@ -1,6 +1,7 @@
 import React from 'react';
 
 const FormularioDecorativo = () => {
+    
     return (
         <form>
             <div className="mb-3">

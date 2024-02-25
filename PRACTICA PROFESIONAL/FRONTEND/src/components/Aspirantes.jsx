@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Aspirantes = () => {
     const [aspirantes, setAspirantes] = useState([]);
-
+     
     useEffect(() => {
         const obtenerAspirantes = async () => {
             try {
@@ -19,7 +19,7 @@ const Aspirantes = () => {
     }, []);
 
     return (
-        <div className="content aspirantes">
+        <div className="content-aspirantes">
             <h2>Aspirantes</h2>
             <div className="person-boxes">
                 {aspirantes.map((aspirante) => (

@@ -9,6 +9,7 @@ const Profesiones = () => {
                 const response = await fetch('http://localhost:3030/profesiones');
                 const data = await response.json();
                 setProfesiones(data); // Supongo que el endpoint devuelve un array de profesiones
+                console.log(data);
             } catch (error) {
                 console.error('Error fetching profesiones:', error);
             }

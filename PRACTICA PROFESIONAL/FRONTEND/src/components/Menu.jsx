@@ -1,5 +1,6 @@
 // Menu.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     return (
@@ -18,34 +19,34 @@ const Menu = () => {
                     <h3>Opciones</h3>
                     <ul>
                         <li>
-                            <a href="/">
+                            <Link to="/">
                                 <i className="bi bi-building" style={{ fontSize: "1.2rem", color: "cornflowerblue" }}></i>
                                   - Empresas
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/aspirantes">
+                            <Link to="/aspirantes">
                                 <i className="bi bi-person" style={{ fontSize: "1.2rem", color: "cornflowerblue" }}></i>
                                 - Aspirantes
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/profesiones">
+                            <Link to ="/profesiones">
                                 <i className="bi bi-list-check" style={{ fontSize: "1.2rem", color: "cornflowerblue" }}></i>
                                 - Profesiones
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/formulario">
+                            <Link to="/formulario">
                                 <i className="bi bi-person-vcard" style={{ fontSize: "1.2rem", color: "cornflowerblue" }}></i>
                                 - Postulate aquí
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="/contacto">
+                            <Link to="/contacto">
                                 <i className="bi bi-chat-left-text" style={{ fontSize: "1.2rem", color: "cornflowerblue" }}></i>
                                 - Contacto
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </section>
